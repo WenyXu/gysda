@@ -1,0 +1,125 @@
+.about-us
+    &__name
+        position: relative
+        padding-bottom: 30px
+        width: 100%
+        font-family: $PingFangSCMedium;
+        font-size: 28px
+        line-height: 1
+        color: #aab2cd
+        text-align: center
+    &-team
+        &-text-offset-lg
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-between
+        &-member
+            display: flex
+            margin-bottom: 40px
+            line-height: 1
+            &__name,
+            &__post
+                position: relative
+                width: 100%
+            &__name
+                top: -10px
+                font-family: $PingFangSCMedium
+                font-size: 18px
+                color: #fff
+            &__post
+                top: -4px
+                left: 2px
+                font-family: $PingFangSCRegular
+                font-size: 19px
+                color: #545c79
+            &__avatar
+                width: 146px
+                min-width: 146px
+                height: 146px
+                min-height: 146px
+                border-radius: 100%
+            &__content
+                display: flex
+                flex-direction: column
+                align-items: center
+                justify-content: center
+                padding-left: 28px
+                white-space: nowrap
+    &-consultant
+        padding-bottom: 46px
+        transition: transform .4s
+        &:hover
+            transform: scale(1.1)
+        &-text-offset-lg
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-between
+        &__img
+            margin: 0 auto
+            position: relative
+            display: block
+            width: 211px
+            height: 208px
+            border-radius: 3px
+            img
+                position: relative
+                z-index: 1
+                height: 100%
+                object-fit: cover
+        &__title
+            position: relative
+            top: -12px
+            font-family: $PingFangSCMedium
+            font-size: 18px
+            color: #fff
+            line-height: 1
+        &__post
+            position: relative
+            top: 0
+            margin-top: 6px
+            margin-bottom: 10px
+            font-family: $PingFangSCRegular
+            font-size: 14px
+            line-height: 1
+            color: #545c79
+        &__content
+            z-index: 1
+            position: relative
+            margin: 0 auto
+            padding-left: 26px
+            padding-right: 22px
+            width: 207px
+            display: flex
+            flex-direction: column
+            justify-content: center
+            background-color: #252d4b
+        &__text
+            position: relative
+            top: 3px
+            margin-top: 0
+            font-family: $PingFangSCLight
+            font-size: 14px
+            color: #aab2cd
+            line-height: 21px
+
+.owl-nav
+    z-index: 2
+    position: absolute
+    top: 50%
+    right: 0
+    left: 0
+    transform: translateY(-50%)
+    padding-left: 54px
+    padding-right: 12px
+.owl-prev,
+.owl-next
+    background-color: transparent
+    border: none
+    cursor: pointer
+.owl-prev
+    float: left
+.owl-next
+    float: right
+.owl-button
+    &-disabled
+        pointer-events: none

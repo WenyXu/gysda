@@ -1,0 +1,35 @@
+.solution
+    z-index: 3
+    &__list-item
+        margin-bottom: 50px
+        &:last-child
+            margin-bottom: 0
+    &-text-offset-lg,
+    &__figure
+        display: flex
+    &__figure
+        p
+            margin-top: 4px
+            font-family: PingFangSCRegular
+            font-size: 16px
+            line-height: 24px
+            color: #00fffb
+        h3
+            font-family: $PingFangSCBold
+            font-size: 26px
+            color: #fefefe
+        img
+            margin-right: 24px
+            width: 100px
+            min-width: 100px
+            height: 100px
+            min-height: 100px
+            animation: rotate 1s steps(60) infinite backwards
+    &-text-offset-lg
+        margin-bottom: 31px
+
+@keyframes rotate
+    0%
+        transform: rotate(0deg)
+    100%
+        transform: rotate(360deg)

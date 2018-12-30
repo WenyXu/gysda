@@ -1,0 +1,203 @@
+.btn-menu
+    margin-left: 25px
+    position: relative
+    display: block
+    justify-content: center
+    align-items: flex-end
+    flex-direction: column
+    cursor: pointer
+    text-align: right
+    div
+        width: 32px
+        height: 3px
+        min-height: 3px
+        backface-visibility: hidden
+        transition-duration: .3s
+        margin-bottom: 6px
+        border-radius: 1.5px
+        position: relative
+        background-color: #fff
+        &:first-child
+            &:after
+                content: ''
+                position: absolute
+                top: 0
+                right: 0
+                width: 100%
+                height: 100%
+                background-color: #fff
+                border-radius: 1.5px
+                transition: .4s
+        &:last-child
+            margin-bottom: 0
+            &:after
+                content: ''
+                position: absolute
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+                background-color: #fff
+                border-radius: 1.5px
+                transition: .4s
+    &.on
+        top: -5px
+
+.btn-menu.on .one
+    transform: rotate(45deg) translate(6px, 2px)
+    margin-bottom: 0
+    &:after
+        width: 100%
+        background-color: #777
+
+.btn-menu.on .two
+    opacity: 0
+    margin-bottom: 0
+
+.btn-menu.on .three
+    transform: rotate(-45deg) translate(2px, 2px)
+    width: 32px
+    margin-bottom: 0
+    &:after
+        width: 100%
+        background-color: #777
+
+.fixed-menu
+    position: fixed
+    background-color: $blue
+    width: 100%
+    height: 100%
+    left: 0
+    top: 0
+    z-index: 12
+    visibility: hidden
+    overflow: hidden scroll
+    opacity: 0
+    transition-duration: .4s
+    &.open
+        visibility: visible
+        display: block
+        opacity: 1
+    &__header
+        width: 100%
+        height: 90px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 0 10px
+    &__content
+        padding: 20px 90px 20px
+    .select-styled.active
+        color: rgba(119, 119, 119, 1)
+    .select-options
+        right: -15px
+        top: 45px
+    .select-styled
+        color: #fff
+    .select
+        margin-bottom: 30px
+    .btn-wrap
+        display: flex
+    .btn-menu
+        div
+            background-color: #fff
+            &.one,
+            &.three
+                &:after
+                    background-color: #fff
+
+.btn-close
+    svg
+        width: 28px
+        height: 28px
+        path
+            fill: #fff
+
+.mob-menu
+    margin-bottom: 40px
+    &__item
+        text-align: left
+        margin-bottom: 10px
+        &:last-child
+            margin-bottom: 0
+    &__link
+        color: #fff
+        position: relative
+        transition: .2s
+        white-space: nowrap
+        &:after
+            content: ''
+            position: absolute
+            bottom: 0
+            left: 0
+            width: 100%
+            border-bottom: 2px solid $lblue
+            transition: .4s
+            opacity: 0
+        &:hover
+            color: #fff
+            &:after
+                opacity: 1
+
+.menu
+    position: absolute
+    left: 221px
+    display: none
+    align-items: center
+    &__item
+        position: relative
+        margin-right: 20px
+        &:last-child
+            margin-right: 0
+        &:hover
+            & > ul
+                display: initial
+                opacity: 1
+                transition: all .5s
+        & > ul
+            display: none
+            position: absolute
+            top: -6px
+            left: -14px
+            width: 83px
+            background-color: rgba(#00fffb, .2)
+            font-family: $PingFangSCRegular
+            font-size: 14px
+            opacity: 0
+            \:first-child a
+                color: #00fffb
+                &:hover
+                    color: #00fffb
+            a
+                color: #b0b0b0
+                &:hover
+                    color: #fff
+    &__link
+        display: inline-block
+        color: #fff
+        position: relative
+        transition: .2s
+        white-space: nowrap
+        text-align: center
+        &:after
+            content: ''
+            position: absolute
+            bottom: -9px
+            left: 0
+            width: 100%
+            border-bottom: 2px solid #fff
+            transition: .4s
+            opacity: 0
+        &:hover
+            color: #fff
+            &:after
+                opacity: 1
+        &--offset
+            position: relative
+            top: -5px
+        &--addition
+            margin-right: 0
+            width: 100%
+            line-height: 33px
+            &:after
+                content: none

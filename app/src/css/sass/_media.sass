@@ -1,0 +1,295 @@
+@import 'var'
+
+// ≤1200px
++media-breakpoint-down(lg)
+    .show-lg
+        display: block
+    .about-us-consultant
+        &__title,
+        &__post
+            text-align: center
+        &__title
+            top: 0
+        &__post
+            margin-top: 18px
+        &__content
+            padding-top: 22px
+            padding-bottom: 22px
+    .owl-nav
+        padding-left: 12px
+    .consultant-carousel-wrapper
+        display: -webkit-box
+// ≤992px
++media-breakpoint-down(md)
+
+// ≤768px
++media-breakpoint-down(sm)
+
+// ≤576px
++media-breakpoint-down(xs)
+
+// @media only screen and (max-width: 992px) and (min-width: 768px)
+
+// ≥576px
++media-breakpoint-up(sm)
+// ≥768px
++media-breakpoint-up(md)
+    h1
+        font-size: 50px
+        line-height: 50px
+        margin-bottom: 40px
+    h2
+        font-size: 40px
+        line-height: 45px
+    h3
+        font-size: 20px
+    h4
+        margin-bottom: 30px
+    .section
+        padding: 100px 0
+        &--no-pad-bot
+            padding-bottom: 0
+        &--no-pad-top
+            padding-top: 0
+    .section-header
+        &--big-margin
+            margin-bottom: 100px
+        &--medium-margin
+            margin-bottom: 60px
+        &--small-margin
+            margin-bottom: 42px
+    .fixed-menu
+        &__header
+            padding: 0 40px
+    .header
+        padding: 0 40px
+        &.sticky
+            padding: 0 40px
+    .latest-news-text-offset-lg,
+    .application-scenario-text-offset-lg,
+    .road-map-text-offset-lg
+        padding-top: 200px
+// ≥992px
++media-breakpoint-up(lg)
+    .latest-news-text-offset-lg,
+    .application-scenario-text-offset-lg,
+    .road-map-text-offset-lg,
+    .about-us-text-offset-lg
+        padding-bottom: 0
+
+    .section
+        padding: 150px 0
+        &--no-pad-bot
+            padding-bottom: 0
+        &--no-pad-top
+            padding-top: 0
+    .solution
+        padding-top: 0
+        padding-bottom: 0
+    .introduce
+        &-offset-lg
+            display: block
+            margin: 0 auto
+            flex: 0 0 774px
+            max-width: 774px
+        &-people__bg
+            display: block
+    .collection
+        &__bg
+            top: -176px
+            display: block
+    .economic-ecology
+        &-text-offset-lg
+            padding-top: 118px
+            text-indent: 16px
+        &-name--uppercase
+            margin-top: 3px
+            text-indent: 23px
+    .latest-news
+        &-text-offset-lg
+            margin-bottom: 32px
+            padding-top: 374px
+            text-indent: 5px
+        &-name--uppercase
+            margin-top: 3px
+        &-carousel-offset-lg
+            padding-bottom: 33px
+    .application-scenario
+        &-text-offset-lg
+            padding-top: 150px
+            text-indent: 35px
+        &-image-offset-lg
+            margin: -18px -99px 0 -66px
+    .road-map
+        &-text-offset-lg
+            padding-top: 135px
+            margin-bottom: 65px
+        &-image-offset-lg
+            margin-top: -14px
+            padding-bottom: 201px
+            margin-left: -6px
+    .list
+        &__bg
+            top: -44px
+            display: block
+        &-text-offset-lg
+            margin-top: -96px
+            margin-bottom: 34px
+// ≥1200px
++media-breakpoint-up(xl)
+    .img-width--fill-reset
+        height: 100%
+        &.img-width--fill
+            width: auto
+    .header
+        left: 50%
+        transform: translateX(-50%)
+        max-width: 1480px
+        height: 98px
+        &__right
+            display: flex
+    .menu
+        display: flex
+    .btn-menu
+        display: none
+    .introduce
+        padding-top: 160px
+        padding-bottom: 296px
+        &__block-download-button
+            margin-left: 16px
+        &-text__bg
+            margin-left: initial
+            margin-right: initial
+    .video
+        padding-top: 98px
+        padding-bottom: 0
+        p:last-child
+            padding-top: 5px
+        h2,
+        dd
+            text-align: initial
+    .solution
+        padding-top: 209px
+        &-text-offset-lg
+            margin-bottom: initial
+            margin-bottom: 0
+        &__list-item.solution__list-item--large-offset
+            margin-bottom: 42px
+            .solution__figcaption
+                margin-top: -11px
+                margin-right: -58px
+        &__list-item.solution__list-item--small-offset
+            .solution__figcaption
+                margin-top: -10px
+                margin-right: -68px
+                padding-left: 10px
+    .economic-ecology
+        &-text-offset-lg
+            padding-top: 134px
+            text-indent: 16px
+        &-image
+            top: 22px
+            margin-top: 62px
+            margin-left: 140px
+        &__figcaption
+            &--top
+                top: 121px
+                right: -97px
+            &--center
+                bottom: 218px
+                left: 419px
+                transform: none
+    .about-us
+        &-text-offset-lg
+            margin-top: 268px
+        &-consultant
+            display: flex
+            justify-content: space-between
+            &-text-offset-lg
+                position: relative
+                padding-bottom: 150px
+            &__reset
+                display: inline-block
+                padding: 0
+                height: auto
+                max-width: 418px
+                &:nth-child(2n)
+                    margin-top: initial !important
+    .list
+        padding-bottom: 44px
+    .tabs
+        margin-left: 95px
+        min-height: 400px
+    .show-xl
+        display: block
+        &.card
+            display: flex
+
+@media only screen and (min-width : 1400px)
+    .logo
+        &__title
+            font-size: 30px
+    .menu
+        &__item
+            margin-right: 30px
+            &--offset
+                margin-right: 28px
+    .introduce
+        &-offset-lg
+            margin-left: -145px
+        &__block-content
+            margin-left: 24px
+    .video
+        &-image-offset-lg
+            margin-right: -84px
+            min-width: 810px
+            width: 810px
+            height: 462px
+        &-text-offset-lg
+            padding-top: 50px
+            margin-left: -136px
+            margin-right: 74px
+            flex: 0 0 470px
+            max-width: 470px
+    .solution
+        &-text-offset-lg
+            margin-top: -20px
+            margin-left: -155px
+            min-width: 990px
+            width: 990px
+        &-image-offset-lg
+            position: relative
+            left: -56px
+            margin: -24px -106px 0 0
+            min-width: 410px
+            width: 410px
+    .latest-news
+        &-carousel-offset-lg
+            margin-left: -54px
+            margin-right: -58px
+    .about-us
+        &__name
+            text-align: initial
+        &-consultant
+            &__name
+                left: -145px
+            &-text-offset-lg
+                margin: 0 -145px
+        &-team-text-offset-lg
+            margin-right: -145px
+            margin-left: -145px
+        &-team__name
+            top: -24px
+            left: -145px
+        &-team__reset
+            padding: 0
+            &:nth-child(4n+2)
+                padding-left: 32px
+            &:nth-child(4n+3)
+                padding-left: 66px
+            &:nth-child(4n+4)
+                padding-left: 98px
+@media only screen and (min-width : 1680px)
+    .video
+        &__bg
+            bottom: -500px

@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="utf-8">
+    <base href="/">
+    <title>Gysda</title>
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- Template Basic Images Start -->
+    <!-- <meta property="og:image" content="path/to/image.jpg"> -->
+    <link rel="icon" href="img/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+    <!-- Template Basic Images End -->
+    <!-- Custom Browsers Color Start -->
+    <meta name="theme-color" content="#000">
+    <!-- Custom Browsers Color End -->
+    <!-- <link rel="stylesheet" href="dist/css/app.min.css"> -->
+    <!-- inject:css -->
+    <!-- endinject -->
+    <!-- Load other scripts -->
+    <script type="text/javascript">
+        var _html = document.documentElement;
+        _html.className = _html.className.replace("no-js", "js");
+    </script>
+    <style>
+        .preloader {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            background-color: #fff;
+            z-index: 9999;
+        }
+    </style>
+</head>
+<body>
+    <div class="preloader"></div>
+    <div class="wrapper">
+        <header class="header">
+            <a href="#" class="logo">
+                <div class="logo__img"></div>
+                <div class="logo__title">Gysda</div>
+            </a>
+            <ul class="menu">
+                <li class="menu__item">
+                    <a href="#" class="menu__link">首页</a>
+                </li>
+                <li class="menu__item menu__item--offset">
+                    <a href="#solution" class="menu__link">解决方案</a>
+                    <ul>
+                        <li><a href="#solution" class="menu__link menu__link--addition">解决方案</a></li>
+                        <li><a href="#feature" class="menu__link menu__link--addition">项目特点</a></li>
+                        <li><a href="#digram" class="menu__link menu__link--addition menu__link--offset">项目示意图</a></li>
+                    </ul>
+                </li>
+                <li class="menu__item menu__item--offset">
+                    <a href="#latest-news" class="menu__link">最新消息</a>
+                </li>
+                <li class="menu__item">
+                    <a href="#economic-ecology" class="menu__link">经济生态</a>
+                </li>
+                <li class="menu__item">
+                    <a href="#application-scenario" class="menu__link">应用场景</a>
+                </li>
+                <li class="menu__item">
+                    <a href="#road-map" class="menu__link">路线图</a>
+                </li>
+                <li class="menu__item">
+                    <a href="#common-problem" class="menu__link">常见问题</a>
+                </li>
+                <li class="menu__item">
+                    <a href="#about-us" class="menu__link">关于我们</a>
+                </li>
+            </ul>
+            <div class="header__right">
+                <select class="select">
+                    <option value="cn">%img/china.jpg%!中文!</option>
+                    <option value="en">%img/england.jpg%!English!</option>
+                </select>
+            </div>
+            <div class="btn-menu">
+                <div class="one"></div>
+                <div class="two"></div>
+                <div class="three"></div>
+            </div>
+        </header>
+        <div class="fixed-menu">
+            <div class="fixed-menu__header">
+                <a href="#" class="logo">
+                    <div class="logo__img"></div>
+                    <div class="logo__title">Gysda</div>
+                </a>
+                <div class="btn-close">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px"
+                        y="0px" viewBox="0 0 47.971 47.971" style="enable-background:new 0 0 47.971 47.971;" xml:space="preserve"
+                        width="512px" height="512px">
+                        <path d="M28.228,23.986L47.092,5.122c1.172-1.171,1.172-3.071,0-4.242c-1.172-1.172-3.07-1.172-4.242,0L23.986,19.744L5.121,0.88   c-1.172-1.172-3.07-1.172-4.242,0c-1.172,1.171-1.172,3.071,0,4.242l18.865,18.864L0.879,42.85c-1.172,1.171-1.172,3.071,0,4.242   C1.465,47.677,2.233,47.97,3,47.97s1.535-0.293,2.121-0.879l18.865-18.864L42.85,47.091c0.586,0.586,1.354,0.879,2.121,0.879   s1.535-0.293,2.121-0.879c1.172-1.171,1.172-3.071,0-4.242L28.228,23.986z"
+                            fill="#006DF0" />
+                    </svg>
+                </div>
+            </div>
+            <div class="fixed-menu__content">
+                <ul class="mob-menu">
+                    <li class="mob-menu__item">
+                        <a href="#" class="mob-menu__link">首页</a>
+                    </li>
+                    <li class="mob-menu__item">
+                        <a href="#solution" class="mob-menu__link">解决方案</a>
+                    </li>
+                    <li class="mob-menu__item">
+                        <a href="#latest-news" class="mob-menu__link">最新消息</a>
+                    </li>
+                    <li class="mob-menu__item">
+                        <a href="#economic-ecology" class="mob-menu__link">经济生态</a>
+                    </li>
+                    <li class="mob-menu__item">
+                        <a href="#application-scenario" class="mob-menu__link">应用场景</a>
+                    </li>
+                    <li class="mob-menu__item">
+                        <a href="#road-map" class="mob-menu__link">路线图</a>
+                    </li>
+                    <li class="mob-menu__item">
+                        <a href="#common-problem" class="mob-menu__link">常见问题</a>
+                    </li>
+                    <li class="mob-menu__item">
+                        <a href="#about-us" class="mob-menu__link">关于我们</a>
+                    </li>
+                </ul>
+                <select class="select">
+                    <option value="cn">%img/china.jpg%!中文!</option>
+                    <option value="en">%img/england.jpg%!English!</option>
+                </select>
+            </div>
+        </div>
+        <section class="section introduce">
+            <img src="img/introduce-people.jpg" alt="introduce people" class="introduce-people__bg">
+            <div class="container">
+                <div class="row">
+                    <div class="introduce-offset-lg col-12">
+                        <div class="introduce__block">
+                            <img src="img/introduce-text.png" alt="introduce text" class="introduce-text__bg img-responsive" width="640" height="343">
+                            <p class="introduce__block-content">全球青少年体育数据联盟是国内早期的一家在体育领域统研发、数据采集、实时展现、深度挖掘数据的<wbr/>高科技公司.专注于体育赛事分析,采用图像识别技术等高科技手段,通过云平台分布式计算将体育<wbr/>数据分析结果呈现出来.</p>
+                            <a class="introduce__block-download-button" href="javascript:;">下载白皮书</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section video">
+            <div class="container">
+                <div class="row">
+                    <div data-aos="fade-right" class="col-lg-5 video-text-offset-lg">
+                        <dl class="section-header section-header--animated section-header--tire section-header--small-margin">
+                            <dt><h2>视频展示</h2></dt>
+                            <dd class="video-name--uppercase">VIDEO DISPLAY</dd>
+                        </dl>
+                        <div class="video__animated-content">
+                            <p>是一家全球性的FINTECH公司，是LINUX、HYPERLEDGER和CRYPTOVALLEY FOUNDATIONS的成员</p>
+                            <p>公司和个人用户都可以访问它，OPTHERIUM的使命是创建一个全球金融连锁基础设施</p>
+                            <p>在欧洲联盟拥有完全的和CRYPTO-TO-FIAT货币交换和电子钱包服务的许可的使命是创建一个全球金融连锁基础设施，所有金融机构</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 video-image-offset-lg align-items--center video-image-container">
+                        <img src="img/video-background.jpg" class="video__img img-responsive img-width--fill" alt="视频背景">
+                        <a data-jarallax-element="-40" href="https://www.youtube.com/watch?v=3cZjVFKzugY&list=PLcpkKchW7Xe5K578xRCwQbPbeVQGN5K9h&index=10"
+                            class="video-btn--playing popup-youtube">
+                            <img src="img/video-play-button.png" alt="播放按钮" width="90" height="90">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section solution">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <dl class="section-header section-header--animated section-header--center section-header--medium-margin">
+                            <dt><h2 id="solution">解决方案</h2></dt>
+                            <dd class="solution-name--uppercase">SOLUTION</dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="row">
+                    <figure data-aos="fade-right" class="col-xl-8 col-lg-12 align-items--center solution-text-offset-lg">
+                        <img src="img/solution.png" class="img-responsive img-width--fill img-width--fill-reset" alt="解决方案">
+                    </figure>
+                    <ul class="col-xl-4 col-lg-12 solution-image-offset-lg">
+                        <li class="solution__list-item">
+                            <figure class="solution__figure"><img src="img/players-database.png" class="img-responsive" width="100" alt="球员数据库">
+                                <figcaption class="solution__figcaption">
+                                    <h3>球员数据库</h3>
+                                    <p>可穿戴设备记录球员在赛场上的体能消耗,赛后生成球员生长曲线</p>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        <li class="solution__list-item">
+                            <figure class="solution__figure"><img src="img/games-database.png" class="img-responsive" width="100" alt="赛事数据库">
+                                <figcaption class="solution__figcaption">
+                                    <h3>赛事数据库</h3>
+                                    <p>包含赛事信息、赛事数据排行榜、参与程度和比赛视频的可视化体现</p>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        <li class="solution__list-item solution__list-item--large-offset">
+                            <figure class="solution__figure"><img src="img/classes-management-system.png" class="img-responsive" width="100"
+                                    alt="课程管理系统">
+                                <figcaption class="solution__figcaption">
+                                    <h3>课程管理系统</h3>
+                                    <p>系统的管理足球运动员和教练的个人信息,根据收集到的信息,由人工智能系统为教练提供训练方案参考,为球员提供动作回顾</p>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        <li class="solution__list-item solution__list-item--small-offset">
+                            <figure class="solution__figure"><img src="img/players-management-system.png" class="img-responsive" width="100"
+                                    alt="球员管理系统">
+                                <figcaption class="solution__figcaption">
+                                    <h3>球员管理系统</h3>
+                                    <p>根据每个球员的运动表现,生成球员职业生涯过程中的赛事履历,赛场表现情况和专业能力评估,帮助球员更好的提高球技</p>
+                                </figcaption>
+                            </figure>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="section collection">
+            <img src="img/colorful-sky.jpg" alt="collection" class="collection__bg img-responsive">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <dl class="section-header section-header--animated section-header--center section-header--medium-margin economic-ecology-text-offset-lg">
+                            <dt><h2 id="economic-ecology">经济生态</h2></dt>
+                            <dd class="economic-ecology-name--uppercase">ECONOMIC ECOLOGY</dd>
+                        </dl>
+                        <figure class="col-12 economic-ecology__figure show-xl">
+                            <img src="img/economic-ecology-xl.png" alt="经济生态" class="economic-ecology-image img-responsive">
+                            <figcaption class="economic-ecology__figcaption economic-ecology__figcaption--left">数据应用商/第三方机构/球队/经纪公司</figcaption>
+                            <figcaption class="economic-ecology__figcaption economic-ecology__figcaption--top">青训营/意见领袖/C端用户</figcaption>
+                            <figcaption class="economic-ecology__figcaption economic-ecology__figcaption--bottom">全球青少年数据库</figcaption>
+                            <figcaption class="economic-ecology__figcaption economic-ecology__figcaption--center">Dapp/体育游戏/执教平台/体育赛事平台</figcaption>
+                        </figure>
+                        <picture class="col-12 economic-ecology__figure show-lg">
+                            <img
+                                sizes="(max-width: 1322px) 100vw, 1322px"
+                                srcset="img/economic-ecology-lg-200.png 200w,img/economic-ecology-lg-327.png 327w,img/economic-ecology-lg-431.png 431w,img/economic-ecology-lg-526.png 526w,img/economic-ecology-lg-605.png 605w,img/economic-ecology-lg-684.png 684w,img/economic-ecology-lg-768.png 768w,img/economic-ecology-lg-837.png 837w,img/economic-ecology-lg-910.png 910w,img/economic-ecology-lg-980.png 980w,img/economic-ecology-lg-1042.png 1042w,img/economic-ecology-lg-1101.png 1101w,img/economic-ecology-lg-1158.png 1158w,img/economic-ecology-lg-1322.png 1322w"
+                                src="img/economic-ecology-lg-1322.png"
+                                alt="经济生态"
+                                class="economic-ecology-image img-responsive"
+                            />
+                        </picture>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <dl class="section-header section-header--animated section-header--center section-header--medium-margin latest-news-text-offset-lg">
+                            <dt><h2 id="latest-news">最新消息</h2></dt>
+                            <dd class="collection-name--uppercase">LATEST NEWS</dd>
+                        </dl>
+                        <div class="latest-news-carousel-offset-lg">
+                            <div class="news-carousel owl-carousel">
+                                <a data-aos="fade-up" href="javascript:;" class="col-lg-4 col-12 news-carousel__item">
+                                    <div class="news-carousel__item-body">
+                                        <h3 class="news-carousel__item-title">最新三大技术在生态中起到的作用</h3>
+                                        <p>全球全民运动智能数据生态项目采用目前全球三大最热门技术：物联网+人工智能+区块链，旨在打造全球最大最全的体育数据共享平台。</p>
+                                        <time class="news-carousel__item-data">2018.12.24</time>
+                                    </div>
+                                </a>
+                                <a data-aos="fade-up" data-aos-delay="200" href="javascript:;" class="col-lg-4 col-12 news-carousel__item">
+                                    <div class="news-carousel__item-body">
+                                        <h3 class="news-carousel__item-title">最新三大技术在生态中起到的作用</h3>
+                                        <p>全球全民运动智能数据生态项目采用目前全球三大最热门技术：物联网+人工智能+区块链，旨在打造全球最大最全的体育数据共享平台。</p>
+                                        <time class="news-carousel__item-data">2018.12.25</time>
+                                    </div>
+                                </a>
+                                <a data-aos="fade-up" data-aos-delay="200" href="javascript:;" class="col-lg-4 col-12 news-carousel__item">
+                                    <div class="news-carousel__item-body">
+                                        <h3 class="news-carousel__item-title">最新三大技术在生态中起到的作用</h3>
+                                        <p>全球全民运动智能数据生态项目采用目前全球三大最热门技术：物联网+人工智能+区块链，旨在打造全球最大最全的体育数据共享平台。</p>
+                                        <time class="news-carousel__item-data">2018.12.26</time>
+                                    </div>
+                                </a>
+                                <a data-aos="fade-up" data-aos-delay="200" href="javascript:;" class="col-lg-4 col-12 news-carousel__item">
+                                    <div class="news-carousel__item-body">
+                                        <h3 class="news-carousel__item-title">最新三大技术在生态中起到的作用</h3>
+                                        <p>全球全民运动智能数据生态项目采用目前全球三大最热门技术：物联网+人工智能+区块链，旨在打造全球最大最全的体育数据共享平台。</p>
+                                        <time class="news-carousel__item-data">2018.12.27</time>
+                                    </div>
+                                </a>
+                                <a data-aos="fade-up" data-aos-delay="200" href="javascript:;" class="col-lg-4 col-12 news-carousel__item">
+                                    <div class="news-carousel__item-body">
+                                        <h3 class="news-carousel__item-title">最新三大技术在生态中起到的作用</h3>
+                                        <p>全球全民运动智能数据生态项目采用目前全球三大最热门技术：物联网+人工智能+区块链，旨在打造全球最大最全的体育数据共享平台。</p>
+                                        <time class="news-carousel__item-data">2018.12.28</time>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <dl class="section-header section-header--animated section-header--center section-header--medium-margin application-scenario-text-offset-lg">
+                            <dt><h2 id="application-scenario">应用场景</h2></dt>
+                            <dd class="collection-name--uppercase">APPLICATION SCENARIO</dd>
+                        </dl>
+                        <div class="card application-scenario-image-offset-lg show-xl">
+                            <figure class="card__figure--sport card__figure">
+                                <img src="img/sport.png" alt="" width="118">
+                                <figcaption class="card__figcaption">以球员为核心的教育类项目</figcaption>
+                            </figure>
+                            <figure class="card__figure--medical card__figure">
+                                <img src="img/medical.png" alt="medical" width="188">
+                                <figcaption class="card__figcaption">医疗服务类项目</figcaption>
+                            </figure>
+                            <figure class="card__figure--platform card__figure">
+                                <img src="img/platform.png" alt="platform" width="146">
+                                <figcaption class="card__figcaption">赛事综合类服务平台</figcaption>
+                            </figure>
+                        </div>
+                        <picture class="card application-scenario-image-offset-lg show-lg">
+                            <img
+                                sizes="(max-width: 1332px) 100vw, 1332px"
+                                srcset="img/application-scenario-lg-200.png 200w,img/application-scenario-lg-667.png 667w,img/application-scenario-lg-1332.png 1332w"
+                                src="img/application-scenario-lg-1332.png"
+                                class="img-responsive"
+                                alt="application-scenario"
+                            />
+                        </picture>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <dl class="section-header section-header--animated section-header--center section-header--medium-margin road-map-text-offset-lg">
+                            <dt><h2 id="road-map">路线图</h2></dt>
+                            <dd class="collection-name--uppercase">ROAD MAP</dd>
+                        </dl>
+                        <figure class="road-map-image-offset-lg chart show-xl">
+                            <img src="img/road-map-xl.png" class="img-responsive" alt="路线图">
+                            <figcaption class="chart-item">
+                                <span>全球发起会</span><time>2019.01</time>
+                            </figcaption>
+                            <figcaption class="chart-item">
+                                <time>2019.12</time><span>全球青少年比赛</span>
+                            </figcaption>
+                            <figcaption class="chart-item">
+                                <span>基石轮</span><time>2019.02</time>
+                            </figcaption>
+                            <figcaption class="chart-item">
+                                <time>2019.11</time><span>发起主网</span>
+                            </figcaption>
+                            <figcaption class="chart-item">
+                                <span>公募轮</span><time>2019.03</time>
+                            </figcaption>
+                            <figcaption class="chart-item">
+                                <time>2019.10</time><span>发起全球节点</span>
+                            </figcaption>
+                            <figcaption class="chart-item">
+                                <span>韩国应用落地</span><time>2019.04</time>
+                            </figcaption>
+                            <figcaption class="chart-item">
+                                <time>2019.09</time><span>日本越南落地应用</span>
+                            </figcaption>
+                            <figcaption class="chart-item">
+                                <span>越南发起会</span><time>2019.05</time>
+                            </figcaption>
+                            <figcaption class="chart-item">
+                                <time>2019.08</time><span>日本发起会</span>
+                            </figcaption>
+                            <figcaption class="chart-item">
+                                <span>韩国足球比赛</span><time>2019.06</time>
+                            </figcaption>
+                            <figcaption class="chart-item">
+                                <time>2019.07</time><span>整理交易所名单</span>
+                            </figcaption>
+                        </figure>
+                        <picture class="road-map-image-offset-lg show-lg">
+                            <img
+                                sizes="(max-width: 859px) 100vw, 859px"
+                                srcset="img/road-map-lg-190.png 190w,img/road-map-lg-443.png 443w,img/road-map-lg-859.png 859w"
+                                src="img/road-map-lg-859.png"
+                                class="img-responsive"
+                                alt="路线图"
+                            />
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section list">
+            <img src="img/ripple-sky.jpg" alt="list" class="list__bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <dl class="section-header section-header--animated section-header--center section-header--medium-margin list-text-offset-lg">
+                            <dt><h2 id="common-problem">常见问题</h2></dt>
+                            <dd class="list-name--uppercase">COMMON PROBLEM</dd>
+                        </dl>
+                        <div class="tabs">
+                            <div class="tab">
+                                <input type="radio" name="tabgroup" id="tab-1" checked>
+                                <label for="tab-1">科技</label>
+                                <div class="content">
+                                    <ul class="accordion">
+                                        <li>
+                                            <a>体育人才以及数据一般存在哪些问题？</a>
+                                            <p>群众体育消费意识低下，很多人对体育服务业的花费持不需要或不必要的态度；当前体育服务行业层次不高，普遍存在着经营场所不合理、设施不足、设施质量低下，而传统的数据分析系统有着数据不真实不准确、数据陈旧、数据库单一等问题，致使体育服务业长期处于发展缓慢的局面。</p>
+                                        </li>
+                                        <li>
+                                            <a>全球全民运动智能数据生态对人才以及数据的处理方案</a>
+                                            <p>群众体育消费意识低下，很多人对体育服务业的花费持不需要或不必要的态度；当前体育服务行业层次不高，普遍存在着经营场所不合理、设施不足、设施质量低下，而传统的数据分析系统有着数据不真实不准确、数据陈旧、数据库单一等问题，致使体育服务业长期处于发展缓慢的局面。</p>
+                                        </li>
+                                        <li>
+                                            <a>全球全民运动智能数据生态</a>
+                                            <p>群众体育消费意识低下，很多人对体育服务业的花费持不需要或不必要的态度；当前体育服务行业层次不高，普遍存在着经营场所不合理、设施不足、设施质量低下，而传统的数据分析系统有着数据不真实不准确、数据陈旧、数据库单一等问题，致使体育服务业长期处于发展缓慢的局面。</p>
+                                        </li>
+                                        <li>
+                                            <a>青训营/大众（业余、职业俱乐部梯队）</a>
+                                            <p>群众体育消费意识低下，很多人对体育服务业的花费持不需要或不必要的态度；当前体育服务行业层次不高，普遍存在着经营场所不合理、设施不足、设施质量低下，而传统的数据分析系统有着数据不真实不准确、数据陈旧、数据库单一等问题，致使体育服务业长期处于发展缓慢的局面。</p>
+                                        </li>
+                                        <li>
+                                            <a>消费者-运动员父母/比赛观看者 </a>
+                                            <p>群众体育消费意识低下，很多人对体育服务业的花费持不需要或不必要的态度；当前体育服务行业层次不高，普遍存在着经营场所不合理、设施不足、设施质量低下，而传统的数据分析系统有着数据不真实不准确、数据陈旧、数据库单一等问题，致使体育服务业长期处于发展缓慢的局面。</p>
+                                        </li>
+                                        <li>
+                                            <a>什么是数据应用商? </a>
+                                            <p>群众体育消费意识低下，很多人对体育服务业的花费持不需要或不必要的态度；当前体育服务行业层次不高，普遍存在着经营场所不合理、设施不足、设施质量低下，而传统的数据分析系统有着数据不真实不准确、数据陈旧、数据库单一等问题，致使体育服务业长期处于发展缓慢的局面。</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="tab">
+                                <input type="radio" name="tabgroup" id="tab-2">
+                                <label for="tab-2">平台</label>
+                                <div class="content">
+                                    <ul class="accordion">
+                                        <li>
+                                            <a>体育行业人才以及数据存一般存在哪些问题？</a>
+                                            <p>群众体育消费意识低下，很多人对体育服务业的花费持不需要或不必要的态度；当前体育服务行业层次不高，普遍存在着经营场所不合理、设施不足、设施质量低下，而传统的数据分析系统有着数据不真实不准确、数据陈旧、数据库单一等问题，致使体育服务业长期处于发展缓慢的局面。</p>
+                                        </li>
+                                        <li>
+                                            <a>全球全民运动智能数据生态对人才以及数据的处理方案</a>
+                                            <p>群众体育消费意识低下，很多人对体育服务业的花费持不需要或不必要的态度；当前体育服务行业层次不高，普遍存在着经营场所不合理、设施不足、设施质量低下，而传统的数据分析系统有着数据不真实不准确、数据陈旧、数据库单一等问题，致使体育服务业长期处于发展缓慢的局面。</p>
+                                        </li>
+                                        <li>
+                                            <a>全球全民运动智能数据生态</a>
+                                            <p>群众体育消费意识低下，很多人对体育服务业的花费持不需要或不必要的态度；当前体育服务行业层次不高，普遍存在着经营场所不合理、设施不足、设施质量低下，而传统的数据分析系统有着数据不真实不准确、数据陈旧、数据库单一等问题，致使体育服务业长期处于发展缓慢的局面。</p>
+                                        </li>
+                                        <li>
+                                            <a>青训营/大众（业余、职业俱乐部梯队）</a>
+                                            <p>群众体育消费意识低下，很多人对体育服务业的花费持不需要或不必要的态度；当前体育服务行业层次不高，普遍存在着经营场所不合理、设施不足、设施质量低下，而传统的数据分析系统有着数据不真实不准确、数据陈旧、数据库单一等问题，致使体育服务业长期处于发展缓慢的局面。</p>
+                                        </li>
+                                        <li>
+                                            <a>消费者-运动员父母/比赛观看者 </a>
+                                            <p>群众体育消费意识低下，很多人对体育服务业的花费持不需要或不必要的态度；当前体育服务行业层次不高，普遍存在着经营场所不合理、设施不足、设施质量低下，而传统的数据分析系统有着数据不真实不准确、数据陈旧、数据库单一等问题，致使体育服务业长期处于发展缓慢的局面。</p>
+                                        </li>
+                                        <li>
+                                            <a>什么是数据应用商? </a>
+                                            <p>群众体育消费意识低下，很多人对体育服务业的花费持不需要或不必要的态度；当前体育服务行业层次不高，普遍存在着经营场所不合理、设施不足、设施质量低下，而传统的数据分析系统有着数据不真实不准确、数据陈旧、数据库单一等问题，致使体育服务业长期处于发展缓慢的局面。</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="tab">
+                                <input type="radio" name="tabgroup" id="tab-3">
+                                <label for="tab-3">学校</label>
+                                <div class="content">
+                                    <ul class="accordion">
+                                        <li>
+                                            <a>体育人才以及数据一般存在哪些问题？</a>
+                                            <p>群众体育消费意识低下，很多人对体育服务业的花费持不需要或不必要的态度；当前体育服务行业层次不高，普遍存在着经营场所不合理、设施不足、设施质量低下，而传统的数据分析系统有着数据不真实不准确、数据陈旧、数据库单一等问题，致使体育服务业长期处于发展缓慢的局面。</p>
+                                        </li>
+                                        <li>
+                                            <a>全球全民运动智能数据生态对人才以及数据的处理方案</a>
+                                            <p>群众体育消费意识低下，很多人对体育服务业的花费持不需要或不必要的态度；当前体育服务行业层次不高，普遍存在着经营场所不合理、设施不足、设施质量低下，而传统的数据分析系统有着数据不真实不准确、数据陈旧、数据库单一等问题，致使体育服务业长期处于发展缓慢的局面。</p>
+                                        </li>
+                                        <li>
+                                            <a>全球全民运动智能数据生态</a>
+                                            <p>群众体育消费意识低下，很多人对体育服务业的花费持不需要或不必要的态度；当前体育服务行业层次不高，普遍存在着经营场所不合理、设施不足、设施质量低下，而传统的数据分析系统有着数据不真实不准确、数据陈旧、数据库单一等问题，致使体育服务业长期处于发展缓慢的局面。</p>
+                                        </li>
+                                        <li>
+                                            <a>青训营/大众（业余、职业俱乐部梯队）</a>
+                                            <p>群众体育消费意识低下，很多人对体育服务业的花费持不需要或不必要的态度；当前体育服务行业层次不高，普遍存在着经营场所不合理、设施不足、设施质量低下，而传统的数据分析系统有着数据不真实不准确、数据陈旧、数据库单一等问题，致使体育服务业长期处于发展缓慢的局面。</p>
+                                        </li>
+                                        <li>
+                                            <a>消费者-运动员父母/比赛观看者 </a>
+                                            <p>群众体育消费意识低下，很多人对体育服务业的花费持不需要或不必要的态度；当前体育服务行业层次不高，普遍存在着经营场所不合理、设施不足、设施质量低下，而传统的数据分析系统有着数据不真实不准确、数据陈旧、数据库单一等问题，致使体育服务业长期处于发展缓慢的局面。</p>
+                                        </li>
+                                        <li>
+                                            <a>什么是数据应用商? </a>
+                                            <p>群众体育消费意识低下，很多人对体育服务业的花费持不需要或不必要的态度；当前体育服务行业层次不高，普遍存在着经营场所不合理、设施不足、设施质量低下，而传统的数据分析系统有着数据不真实不准确、数据陈旧、数据库单一等问题，致使体育服务业长期处于发展缓慢的局面。</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="tab">
+                                <input type="radio" name="tabgroup" id="tab-4">
+                                <label for="tab-4">青训营</label>
+                                <div class="content">
+                                    <ul class="accordion">
+                                        <li>
+                                            <a>体育人才以及数据一般存在哪些问题？</a>
+                                            <p>群众体育消费意识低下，很多人对体育服务业的花费持不需要或不必要的态度；当前体育服务行业层次不高，普遍存在着经营场所不合理、设施不足、设施质量低下，而传统的数据分析系统有着数据不真实不准确、数据陈旧、数据库单一等问题，致使体育服务业长期处于发展缓慢的局面。</p>
+                                        </li>
+                                        <li>
+                                            <a>全球全民运动智能数据生态对人才以及数据的处理方案</a>
+                                            <p>群众体育消费意识低下，很多人对体育服务业的花费持不需要或不必要的态度；当前体育服务行业层次不高，普遍存在着经营场所不合理、设施不足、设施质量低下，而传统的数据分析系统有着数据不真实不准确、数据陈旧、数据库单一等问题，致使体育服务业长期处于发展缓慢的局面。</p>
+                                        </li>
+                                        <li>
+                                            <a>全球全民运动智能数据生态</a>
+                                            <p>群众体育消费意识低下，很多人对体育服务业的花费持不需要或不必要的态度；当前体育服务行业层次不高，普遍存在着经营场所不合理、设施不足、设施质量低下，而传统的数据分析系统有着数据不真实不准确、数据陈旧、数据库单一等问题，致使体育服务业长期处于发展缓慢的局面。</p>
+                                        </li>
+                                        <li>
+                                            <a>青训营/大众（业余、职业俱乐部梯队）</a>
+                                            <p>群众体育消费意识低下，很多人对体育服务业的花费持不需要或不必要的态度；当前体育服务行业层次不高，普遍存在着经营场所不合理、设施不足、设施质量低下，而传统的数据分析系统有着数据不真实不准确、数据陈旧、数据库单一等问题，致使体育服务业长期处于发展缓慢的局面。</p>
+                                        </li>
+                                        <li>
+                                            <a>消费者-运动员父母/比赛观看者 </a>
+                                            <p>群众体育消费意识低下，很多人对体育服务业的花费持不需要或不必要的态度；当前体育服务行业层次不高，普遍存在着经营场所不合理、设施不足、设施质量低下，而传统的数据分析系统有着数据不真实不准确、数据陈旧、数据库单一等问题，致使体育服务业长期处于发展缓慢的局面。</p>
+                                        </li>
+                                        <li>
+                                            <a>什么是数据应用商? </a>
+                                            <p>群众体育消费意识低下，很多人对体育服务业的花费持不需要或不必要的态度；当前体育服务行业层次不高，普遍存在着经营场所不合理、设施不足、设施质量低下，而传统的数据分析系统有着数据不真实不准确、数据陈旧、数据库单一等问题，致使体育服务业长期处于发展缓慢的局面。</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <dl class="section-header section-header--animated section-header--center section-header--medium-margin about-us-text-offset-lg">
+                            <dt><h2 id="about-us">关于我们</h2></dt>
+                            <dd class="list-name--uppercase">ABOUT US</dd>
+                        </dl>
+                        <h3 class="about-us-consultant__name about-us__name">顾问团队</h3>
+                        <div class="about-us-consultant-text-offset-lg">
+                            <div class="swiper-container consultant-carousel-container">
+                                <div class="swiper-wrapper consultant-carousel-wrapper">
+                                    <div data-aos="fade-right" class="col-xl-3 col-sm-12 about-us-consultant__reset swiper-slide">
+                                        <div class="about-us-consultant">
+                                            <a href="javascript:;" class="about-us-consultant__img">
+                                                <img src="img/people.png" alt="">
+                                            </a>
+                                            <div class="about-us-consultant__content">
+                                                <div class="about-us-consultant__title">Tom</div>
+                                                <div class="about-us-consultant__post">执行董事</div>
+                                                <p class="about-us-consultant__text">美国微软高级工程师,十多年后台经验,雷厉风行,美国微软高级工程师,十多年后台经验,雷厉风行.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div data-aos="fade-left" data-aos-delay="200" class="col-xl-3 col-sm-12 about-us-consultant__reset swiper-slide">
+                                        <div class="about-us-consultant">
+                                            <a href="javascript:;" class="about-us-consultant__img">
+                                                <img src="img/people.png" alt="">
+                                            </a>
+                                            <div class="about-us-consultant__content">
+                                                <div class="about-us-consultant__title">Nick</div>
+                                                <div class="about-us-consultant__post">执行董事</div>
+                                                <p class="about-us-consultant__text">美国微软高级工程师,十多年后台经验,雷厉风行,美国微软高级工程师,十多年后台经验,雷厉风行.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div data-aos="fade-right" class="col-xl-3 col-sm-12 about-us-consultant__reset swiper-slide">
+                                        <div class="about-us-consultant">
+                                            <a href="javascript:;" class="about-us-consultant__img">
+                                                <img src="img/people.png" alt="">
+                                            </a>
+                                            <div class="about-us-consultant__content">
+                                                <div class="about-us-consultant__title">Sam</div>
+                                                <div class="about-us-consultant__post">执行董事</div>
+                                                <p class="about-us-consultant__text">美国微软高级工程师,十多年后台经验,雷厉风行,美国微软高级工程师,十多年后台经验,雷厉风行.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div data-aos="fade-left" data-aos-delay="200" class="col-xl-3 col-sm-12 about-us-consultant__reset swiper-slide">
+                                        <div class="about-us-consultant">
+                                            <a href="javascript:;" class="about-us-consultant__img">
+                                                <img src="img/people.png" alt="">
+                                            </a>
+                                            <div class="about-us-consultant__content">
+                                                <div class="about-us-consultant__title">Alex</div>
+                                                <div class="about-us-consultant__post">执行董事</div>
+                                                <p class="about-us-consultant__text">美国微软高级工程师,十多年后台经验,雷厉风行,美国微软高级工程师,十多年后台经验,雷厉风行.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-aos="fade-right" class="col-xl-3 col-sm-12 about-us-consultant__reset swiper-slide">
+                                        <div class="about-us-consultant">
+                                            <a href="javascript:;" class="about-us-consultant__img">
+                                                <img src="img/people.png" alt="">
+                                            </a>
+                                            <div class="about-us-consultant__content">
+                                                <div class="about-us-consultant__title">James</div>
+                                                <div class="about-us-consultant__post">执行董事</div>
+                                                <p class="about-us-consultant__text">美国微软高级工程师,十多年后台经验,雷厉风行,美国微软高级工程师,十多年后台经验,雷厉风行.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div data-aos="fade-left" data-aos-delay="200" class="col-xl-3 col-sm-12 about-us-consultant__reset swiper-slide">
+                                        <div class="about-us-consultant">
+                                            <a href="javascript:;" class="about-us-consultant__img">
+                                                <img src="img/people.png" alt="">
+                                            </a>
+                                            <div class="about-us-consultant__content">
+                                                <div class="about-us-consultant__title">Kobe</div>
+                                                <div class="about-us-consultant__post">执行董事</div>
+                                                <p class="about-us-consultant__text">美国微软高级工程师,十多年后台经验,雷厉风行,美国微软高级工程师,十多年后台经验,雷厉风行.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-aos="fade-right" class="col-xl-3 col-sm-12 about-us-consultant__reset swiper-slide">
+                                        <div class="about-us-consultant">
+                                            <a href="javascript:;" class="about-us-consultant__img">
+                                                <img src="img/people.png" alt="">
+                                            </a>
+                                            <div class="about-us-consultant__content">
+                                                <div class="about-us-consultant__title">Tony</div>
+                                                <div class="about-us-consultant__post">执行董事</div>
+                                                <p class="about-us-consultant__text">美国微软高级工程师,十多年后台经验,雷厉风行,美国微软高级工程师,十多年后台经验,雷厉风行.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div data-aos="fade-left" data-aos-delay="200" class="col-xl-3 col-sm-12 about-us-consultant__reset swiper-slide">
+                                        <div class="about-us-consultant">
+                                            <a href="javascript:;" class="about-us-consultant__img">
+                                                <img src="img/people.png" alt="">
+                                            </a>
+                                            <div class="about-us-consultant__content">
+                                                <div class="about-us-consultant__title">Willian</div>
+                                                <div class="about-us-consultant__post">执行董事</div>
+                                                <p class="about-us-consultant__text">美国微软高级工程师,十多年后台经验,雷厉风行,美国微软高级工程师,十多年后台经验,雷厉风行.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div data-aos="fade-right" class="col-xl-3 col-sm-12 about-us-consultant__reset swiper-slide">
+                                        <div class="about-us-consultant">
+                                            <a href="javascript:;" class="about-us-consultant__img">
+                                                <img src="img/people.png" alt="">
+                                            </a>
+                                            <div class="about-us-consultant__content">
+                                                <div class="about-us-consultant__title">Jones</div>
+                                                <div class="about-us-consultant__post">执行董事</div>
+                                                <p class="about-us-consultant__text">美国微软高级工程师,十多年后台经验,雷厉风行,美国微软高级工程师,十多年后台经验,雷厉风行.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div data-aos="fade-left" data-aos-delay="200" class="col-xl-3 col-sm-12 about-us-consultant__reset swiper-slide">
+                                        <div class="about-us-consultant">
+                                            <a href="javascript:;" class="about-us-consultant__img">
+                                                <img src="img/people.png" alt="">
+                                            </a>
+                                            <div class="about-us-consultant__content">
+                                                <div class="about-us-consultant__title">Bob</div>
+                                                <div class="about-us-consultant__post">执行董事</div>
+                                                <p class="about-us-consultant__text">美国微软高级工程师,十多年后台经验,雷厉风行,美国微软高级工程师,十多年后台经验,雷厉风行.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-aos="fade-right" class="col-xl-3 col-sm-12 about-us-consultant__reset swiper-slide">
+                                        <div class="about-us-consultant">
+                                            <a href="javascript:;" class="about-us-consultant__img">
+                                                <img src="img/people.png" alt="">
+                                            </a>
+                                            <div class="about-us-consultant__content">
+                                                <div class="about-us-consultant__title">Lucy</div>
+                                                <div class="about-us-consultant__post">执行董事</div>
+                                                <p class="about-us-consultant__text">美国微软高级工程师,十多年后台经验,雷厉风行,美国微软高级工程师,十多年后台经验,雷厉风行.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div data-aos="fade-left" data-aos-delay="200" class="col-xl-3 col-sm-12 about-us-consultant__reset swiper-slide">
+                                        <div class="about-us-consultant">
+                                            <a href="javascript:;" class="about-us-consultant__img">
+                                                <img src="img/people.png" alt="">
+                                            </a>
+                                            <div class="about-us-consultant__content">
+                                                <div class="about-us-consultant__title">Mike</div>
+                                                <div class="about-us-consultant__post">执行董事</div>
+                                                <p class="about-us-consultant__text">美国微软高级工程师,十多年后台经验,雷厉风行,美国微软高级工程师,十多年后台经验,雷厉风行.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="owl-nav"><button type="button" role="presentation" class="owl-prev"><img src="img/left-arrow.png" alt="left arrow"></button><button type="button" role="presentation" class="owl-next"><img src="img/right-arrow.png" alt="right arrow"></button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h3 class="about-us-team__name about-us__name">执行团队</h3>
+                        <div class="about-us-team-text-offset-lg">
+                            <div data-aos="fade-right" class="col-xl-3 col-lg-4 col-md-6 about-us-team__reset">
+                                <div class="about-us-team-member">
+                                    <img class="about-us-team-member__avatar" src="img/people.png" alt="">
+                                    <div class="about-us-team-member__content">
+                                        <span class="about-us-team-member__name">比伯·大卫</span>
+                                        <span class="about-us-team-member__post">UI 设计</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-aos="fade-right" class="col-xl-3 col-lg-4 col-md-6 about-us-team__reset">
+                                <div class="about-us-team-member">
+                                    <img class="about-us-team-member__avatar" src="img/people.png" alt="">
+                                    <div class="about-us-team-member__content">
+                                        <span class="about-us-team-member__name">腾小腾</span>
+                                        <span class="about-us-team-member__post">前端工程师</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-aos="fade-right" class="col-xl-3 col-lg-4 col-md-6 about-us-team__reset">
+                                <div class="about-us-team-member">
+                                    <img class="about-us-team-member__avatar" src="img/people.png" alt="">
+                                    <div class="about-us-team-member__content">
+                                        <span class="about-us-team-member__name">黄大仙</span>
+                                        <span class="about-us-team-member__post">后端工程师</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-aos="fade-right" class="col-xl-3 col-lg-4 col-md-6 about-us-team__reset">
+                                <div class="about-us-team-member">
+                                    <img class="about-us-team-member__avatar" src="img/people.png" alt="">
+                                    <div class="about-us-team-member__content">
+                                        <span class="about-us-team-member__name">庞大海</span>
+                                        <span class="about-us-team-member__post">产品经理</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-aos="fade-right" class="col-xl-3 col-lg-4 col-md-6 about-us-team__reset">
+                                <div class="about-us-team-member">
+                                    <img class="about-us-team-member__avatar" src="img/people.png" alt="">
+                                    <div class="about-us-team-member__content">
+                                        <span class="about-us-team-member__name">比伯·大卫</span>
+                                        <span class="about-us-team-member__post">UI 设计</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-aos="fade-right" class="col-xl-3 col-lg-4 col-md-6 about-us-team__reset">
+                                <div class="about-us-team-member">
+                                    <img class="about-us-team-member__avatar" src="img/people.png" alt="">
+                                    <div class="about-us-team-member__content">
+                                        <span class="about-us-team-member__name">腾小腾</span>
+                                        <span class="about-us-team-member__post">前端工程师</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-aos="fade-right" class="col-xl-3 col-lg-4 col-md-6 about-us-team__reset">
+                                <div class="about-us-team-member">
+                                    <img class="about-us-team-member__avatar" src="img/people.png" alt="">
+                                    <div class="about-us-team-member__content">
+                                        <span class="about-us-team-member__name">黄大仙</span>
+                                        <span class="about-us-team-member__post">后端工程师</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-aos="fade-right" class="col-xl-3 col-lg-4 col-md-6 about-us-team__reset">
+                                <div class="about-us-team-member">
+                                    <img class="about-us-team-member__avatar" src="img/people.png" alt="">
+                                    <div class="about-us-team-member__content">
+                                        <span class="about-us-team-member__name">庞大海</span>
+                                        <span class="about-us-team-member__post">产品经理</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="show-xl"/>
+        </section>
+        <footer class="footer">
+            <div class="container">
+                <div class="row row-column">
+                    <img src="img/logo.png" alt="logo" width="154">
+                    <p>我在以下这些地方等你们，快点来关注吧!</p>
+                    <nav class="footer-link__list"
+                        ><a hre="javascript:;"><img src="img/linkedin.svg" alt="linkedin 账号 svg 版" width="23" height="23"></a
+                        ><a hre="javascript:;"><img src="img/google-plus.svg" alt="google-plus 账号号 svg 版" width="23" height="23"></a
+                        ><a hre="javascript:;"><img src="img/facebook.svg" alt="facebook 账号号 svg 版" width="23" height="23"></a
+                        ><a hre="javascript:;"><img src="img/linkedin.png" alt="linkedin 账号 png 版" width="23" height="23"></a
+                        ><a hre="javascript:;"><img src="img/google-plus.png" alt="google-plus 账号 png 版本" width="23" height="23"></a
+                        ><a hre="javascript:;" class="last-child"><img src="img/facebook.png" alt="facebook 账号 png 版" width="23" height="23"></a
+                    ></nav>
+                </div>
+            </div>
+        </footer>
+        </div>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script>
+            window.jQuery || document.write('<script src="lib/jquery/jquery.min.js"><\/script>')
+        </script>
+        <!-- <script src="js/scripts.min.js"></script> -->
+        <!-- inject:js -->
+        <!-- endinject -->
+</body>
+</html>

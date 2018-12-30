@@ -1,0 +1,47 @@
+.chart
+    position: relative
+    font-size: 0
+    img
+        position: absolute
+        top: 2px
+        left: 50%
+        transform: translateX(-50%)
+    time
+        display: inline-block
+        height: 100%;
+        font-family: $PingFangSCBold
+        font-size: 20px
+        letter-spacing: 4px
+        vertical-align: inherit
+    span
+        display: inline-block
+        height: 100%;
+        font-family: $PingFangSCMedium
+        font-size: 18px
+        letter-spacing: 1.8px
+        vertical-align: inherit
+    &-item
+        z-index: 2
+        position: relative
+        margin-bottom: 133px
+        display: inline-block
+        width: 50%
+        color: #fff
+        line-height: 1
+        vertical-align: middle
+        &:nth-last-of-type(1),
+        &:nth-last-of-type(2)
+            margin-bottom: 0
+        &:nth-of-type(2n+1) span,
+        &:nth-of-type(2n) time
+            padding-right: 124px
+            text-align: right
+        &:nth-of-type(2n+1)
+            span
+                width: 386px
+        &:nth-of-type(2n)
+            time
+                width: 296px
+
+.road-map-image-offset-lg
+    display: none

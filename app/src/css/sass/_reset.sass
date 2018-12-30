@@ -1,0 +1,63 @@
+::placeholder
+    color: #666
+
+::selection
+    background-color: $accent
+    color: #fff
+
+html,
+body
+    height: 100%
+
+body
+    font-size: 18px
+    min-width: 320px
+    position: relative
+    line-height: 1.67
+    font-family: $default-font
+    overflow-x: hidden
+    color: $main
+    background-color: $lblue
+    input,
+    textarea
+        border: #666 1px solid
+        outline: none
+        &:focus:required:invalid
+            border-color: red
+        &:required:valid
+            border-color: green
+
+ul
+    margin: 0
+    padding: 0
+    list-style-type: none
+
+p
+    margin: 0
+    padding: 0
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+    margin: 0
+    padding: 0
+
+a
+    &:hover
+        outline: none
+        text-decoration: none
+    &:focus
+        outline: none
+        text-decoration: none
+
+input,
+button
+    &:hover,
+    &:focus
+        outline: none
+
+figure
+    margin-bottom: 0

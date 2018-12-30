@@ -1,0 +1,80 @@
+.section
+    padding: 60px 0
+    &--no-pad-bot
+        padding-bottom: 0
+    &--no-pad-top
+        padding-top: 0
+    &-header
+        position: relative
+        .bg-title
+            display: none
+            left: 50%
+            transform: translateX(-50%)
+            top: -10px
+            font-size: 152px
+            font-weight: 700
+            background: -webkit-linear-gradient(#d047e4 , #ff4e3d )
+            -webkit-background-clip: text
+            -webkit-text-fill-color: transparent
+            opacity: 0.08
+            line-height: 1
+            white-space: nowrap
+            position: absolute
+        &--center
+            text-align: center
+        &--tire
+            h4
+                padding-left: 50px
+                position: relative
+                &:after
+                    content: ''
+                    position: absolute
+                    top: 50%
+                    transform: translateY(-50%)
+                    width: 40px
+                    left: 0
+                    border-bottom: 1px solid #545c79
+        &--white
+            h4
+                color: #fff
+                &:after
+                    border-bottom: 1px solid #fff
+        &--big-margin
+            margin-bottom: 35px
+        &--medium-margin
+            margin-bottom: 35px
+        &--small-margin
+            margin-bottom: 30px
+
+.introdcue__bg,
+.economic-ecology__bg,
+.collection__bg,
+.list__bg
+    display: none
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    min-width: 1680px
+
+.solution,
+.video,
+.economic-ecology,
+.collection,
+.list
+    h2
+        font-family: $PingFangSCMedium
+        font-size: 36px
+    &-name--uppercase
+        margin-top: -3px
+        margin-bottom: 0
+        letter-spacing: 2px
+        font-family: $PingFangSCLight
+        font-size: 20px
+        color: #d7d7d7
+
+.latest-news-text-offset-lg,
+.application-scenario-text-offset-lg,
+.road-map-text-offset-lg,
+.about-us-text-offset-lg
+    padding-top: 120px

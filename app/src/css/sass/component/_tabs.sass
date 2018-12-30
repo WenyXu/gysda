@@ -1,0 +1,37 @@
+.tabs
+    position: relative
+    margin: 0 auto
+    max-width: 882px
+    min-height: 710px
+.tab
+    float: left
+    label
+        margin-bottom: 0
+        width: 73px
+        font-family: $PingFangSCRegular
+        font-size: 20px
+        color: #525d83
+        cursor: pointer
+    [type=radio]
+        position: absolute
+        height: 0
+        width: 0
+        overflow: hidden
+        clip: rect(0, 0, 0, 0)
+    &:focus + label
+        outline: 2px dotted black
+.content
+    position: absolute
+    top: 44px
+    left: 0
+    right: 0
+    bottom: 0
+    opacity: 0
+[type=radio]:checked ~ label
+    z-index: 2
+    font-family: $PingFangSCMedium
+    color: #fefefe
+
+[type=radio]:checked ~ label ~ .content
+    z-index: 1
+    opacity: 1

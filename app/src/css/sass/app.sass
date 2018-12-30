@@ -1,0 +1,146 @@
+@import 'var'
+@import 'lib'
+@import 'helper'
+@import 'reset'
+@import 'component/header'
+@import 'component/menu'
+@import 'component/select'
+@import 'component/tabs'
+@import 'component/section'
+@import 'component/footer'
+
+h1
+    font-size: 40px
+    line-height: 45px
+    font-weight: 700
+    color: #fff
+    max-width: 545px
+    span
+        display: inline
+        font-weight: 100
+
+h2
+    font-weight: 700
+    font-size: 30px
+    line-height: 35px
+    color: #fff
+    span
+        display: block
+        font-weight: 100
+
+h3
+    font-size: 18px
+    font-weight: 700
+    color: #333
+
+h4
+    font-size: 12px
+    letter-spacing: 1.2px
+    color: #545c79
+    text-transform: uppercase
+    font-weight: 700
+    margin-bottom: 15px
+
+section
+    position: relative
+    z-index: 1
+
+.wrapper
+    position: relative
+    overflow: hidden
+    min-width: 375
+
+.logo
+    margin-right: 0
+    display: flex
+    align-items: center
+    transition: opacity .4s
+    position: relative
+    &__img
+        width: 108px
+        height: 52px
+        background: transparent url(logo.png) no-repeat center
+        background-size: contain
+        transition: background-image .4s
+    &__title
+        text-indent: -9999px
+        font-size: 27px
+        color: #fff
+    &:hover
+        opacity: .5
+
+.collection
+    position: relative
+
+.consultant-carousel
+    &-wrapper
+        justify-content: space-between
+
+$color: #36f2f9
+.accordion
+    border-top: 2px solid #3b4360
+    li
+        position: relative
+        padding: 15px 0 15px 0
+        min-height: 67px
+        border-bottom: 2px solid #3b4360
+    p
+        display: none
+        min-height: 30px
+        padding-top: 10px
+        font-size: 18px
+        font-family: $PingFangSCLight
+        line-height: 30px
+        letter-spacing: 0
+        color: #aab2cd
+    a
+        overflow: hidden
+        position: relative
+        display: block
+        width: 100%
+        height: 35px
+        padding-right: 25px
+        line-height: 35px
+        cursor: pointer
+        font-family: $PingFangSCMedium
+        font-size: 20px
+        user-select: none
+        transition: color .4s
+        color: #fff
+        white-space: nowrap
+        text-overflow: ellipsis
+        &:after
+            content: ''
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+            right: 0
+            width: 19px
+            border-bottom: 3px solid $color
+        &:before
+            content: ''
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+            right: 7.5px
+            width: 3px
+            height: 19px
+            transition: height .4s
+            border-left: 3px solid $color
+        &:hover
+            color: $color !important
+        &.active
+            &:before
+                height: 0
+
+hr
+    display: none
+    margin: 0
+    position: absolute
+    bottom: 548px
+    left: 0
+    width: 100%
+    height: 1px
+    background-color: #3b4360
+    border: 0
+@import 'media' // Always at the end

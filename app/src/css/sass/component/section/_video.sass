@@ -1,0 +1,62 @@
+.video
+    .container
+        z-index: 2
+        position: relative
+    &__bg
+        z-index: 1
+        position: absolute
+        bottom: -420px
+        left: 0
+        width: 100%
+        object-fit: cover
+        min-width: 1680px
+    &__animated-content
+        font-family: $PingFangSCRegular
+        color: #d7d7d7
+        font-size: 16px
+        line-height: 27px
+    p
+        margin-bottom: 26px
+        word-break: break-all
+        line-height: 27px
+    h2,
+    dd
+        text-align: center
+    ul
+        margin-bottom: 25px
+        li
+            margin-bottom: 12px
+            position: relative
+            padding-left: 23px
+            &:before
+                content: ''
+                position: absolute
+                top: 12px
+                left: 0
+                width: 5px
+                height: 5px
+                background-color: #fff
+                border-radius: 50%
+            &:last-child
+                margin-bottom: 0
+
+    &-btn--playing
+        z-index: 2
+        position: absolute
+        display: block
+        width: 90px
+        height: 90px
+        left: 50%
+        transform: translateX(-50%) !important
+        border-radius: 50%
+        background-color: transparent
+        &:hover
+            transform: scale(1.1) translateX(-50%) !important
+            transform-origin: center center
+            transition: transform .5s
+        img
+            width: 100%
+            height: 100%
+
+    &-image-container
+        position: relative

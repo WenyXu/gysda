@@ -1,0 +1,57 @@
+.news-carousel
+    &__item
+        display: block
+        min-width: 100%
+        width: 386px
+        height: 352px
+        padding: 46px 42px 46px 40px
+        border-radius: 8px
+        background-color: #232d4b
+    &__item-title
+        height: 68px
+        font-family: $PingFangSCHeavy
+        font-size: 24px
+        color: #fff
+        line-height: 34px
+    p
+        margin-top: 18px
+        font-family: $PingFangSCMedium
+        font-size: 15px
+        color: #9da5bf
+        line-height: 30px
+    &__item-data
+        position: absolute
+        bottom: 46px
+        font-size: 16px;
+        line-height: 1
+        color: #525a7b;
+    .owl-item
+        transform-origin: center center
+        transition: transform .5s
+        &.active.center
+            .news-carousel__item-title,
+            p
+                color: #36f2f9
+        &:hover
+            transform: scale(1.1)
+    .owl-dots
+        display: flex
+        justify-content: center
+        align-items: center
+        padding-top: 32px
+
+    button.owl-dot
+        width: 10px
+        height: 10px
+        border-radius: 50%
+        transition: .4s
+        background-color: #dedede
+        cursor: pointer
+        margin-right: 10px
+        &:last-child
+            margin-right: 14px
+        &.active
+            width: 12px
+            height: 12px
+            background-color: #00d1e4
+

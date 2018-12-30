@@ -1,0 +1,50 @@
+.card
+    justify-content: space-between
+    align-items: center
+    &__figure
+        background: transparent no-repeat center
+        background-size: 100% auto
+        background-blend-mode: normal, normal
+        border-radius: 10px
+        cursor: pointer
+        text-align: center
+        box-sizing: border-box
+        transform-origin: center center
+        transition: transform .5s
+        &:hover
+            transform: scale(1.1)
+    &__figure--sport
+        width: 374px
+        height: 445px
+        padding-top: 105px
+        background-image: url(orange-gradient-background-color.png)
+        background-image: linear-gradient(0deg, #e7494e 0%, #eb7442 100%), linear-gradient(#e85f70, #e85f70);
+        img
+            margin-bottom: 60px
+
+    &__figure--medical
+        width: 430px
+        height: 510px
+        padding-top: 107px
+        background-image: url(blue-gradient-background-color.png)
+        background-image: linear-gradient(0deg, #0071da 0%, #2bb8fc 100%), linear-gradient(#e85f70, #e85f70);
+        img
+            margin-bottom: 56px
+    &__figure--platform
+        width: 374px
+        height: 445px
+        padding-top: 117px
+        background-image: url(green-gradient-background-color.png)
+        background-image: linear-gradient(0deg, #2db837 0%, #3ee749 100%), linear-gradient(#e85f70, #e85f70);
+        img
+            margin-bottom: 62px
+    &__figcaption
+        margin: 0 auto
+        max-width: 198px
+        font-family: $PingFangSCBold
+        color: #fff;
+        font-size: 22px
+        line-height: 25px
+
+.application-scenario-image-offset-lg
+    display: none
