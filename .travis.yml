@@ -5,6 +5,7 @@ sudo: required
 dist: trusty
 script:
   - "npm run build"
+  - "npm run build:porter"
 branches:
   only:
     - master
