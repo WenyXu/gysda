@@ -41,7 +41,8 @@ exports.html = {
 
 exports.image = {
     app: {
-        glob: 'app/src/img/**/*'
+        glob: 'app/src/img/**/*.{jpeg,png,svg,gif,ico}',
+        default: 'app/src/img/**/*.jpg'
     },
     dist: {
         default: 'app/dist/img',
@@ -51,7 +52,8 @@ exports.image = {
 
 exports.revision = {
     app: {
-        glob: 'app/dist/**/*.{css,js,jpeg,jpg,png,svg,ico}'
+        glob: 'app/dist/**/*.{css,js,jpeg,jpg,png,svg,ico}',
+        exclude: ['china.jpg', 'england.jpg'].map(image => `!app/dist/**/${image}`)
     },
     dist: {
         default: 'app/dist'

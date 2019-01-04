@@ -13,8 +13,8 @@ var cleancss = require('gulp-clean-css');
 var rename = require('gulp-rename');
 var autoprefixer = require('gulp-autoprefixer');
 var streamSeries = require('stream-series');
-var del = require( 'del' );
-var runSequence = require( 'run-sequence');
+var del = require('del');
+var runSequence = require('run-sequence');
 var rev = require('gulp-rev');
 var revRewrite = require('gulp-rev-rewrite');
 var revDelete = require('gulp-rev-delete-original');
@@ -47,23 +47,40 @@ var {
 } = require('./paths.config');
 
 var imageConfig = {
-    src: imageApp.glob,
+    othersImageFormatSrc: imageApp.glob,
+    jpgImageFormatSrc: imageApp.default,
     build: imageDist.default,
-    minOpt: {
+    othersImageFormatMinOpt: {
         optimizationLevel: 5
+    },
+    jpgImageFormatMinOpt: {
+        progressive: true
     }
 };
 
-gulp.task('images', function () {
+gulp.task('images:others', function () {
     return gulp
-        .src(imageConfig.src)
+        .src(imageConfig.othersImageFormatSrc)
         .pipe(newer(imageConfig.build))
-        .pipe(imagemin(imageConfig.minOpt))
+        .pipe(imagemin(imageConfig.othersImageFormatMinOpt))
         .pipe(size({
             showFiles: true
         }))
         .pipe(gulp.dest(imageConfig.build))
 });
+
+gulp.task('images:jpg', function () {
+    return gulp
+        .src(imageConfig.jpgImageFormatSrc)
+        .pipe(newer(imageConfig.build))
+        .pipe(imagemin(imageConfig.jpgImageFormatMinOpt))
+        .pipe(size({
+            showFiles: true
+        }))
+        .pipe(gulp.dest(imageConfig.build))
+});
+
+gulp.task('images', ['images:others', 'images:jpg']);
 
 var includePaths = [
     path.join(__dirname, 'app', 'lib')
@@ -153,27 +170,36 @@ gulp.task('html:minify', () => {
 });
 
 gulp.task('revision', ['images', 'js:lib', 'js:app', 'sass'], function () {
-    return gulp.src(revisionApp.glob)
+    var revisionSrc = revisionApp.glob;
+    if (revisionApp.exclude) revisionSrc = [revisionSrc].concat(revisionApp.exclude);
+
+    return gulp.src(revisionSrc)
         .pipe(rev())
-        .pipe(revDelete())
+        .pipe(revDelete({
+            exclude: /(?:china|england)\.jpg$/
+        }))
         .pipe(gulp.dest(revisionDist.default))
         .pipe(rev.manifest())
         .pipe(gulp.dest(revisionDist.default));
 });
 
-gulp.task('revRewrite:html', ['revision'], function() {
+gulp.task('revRewrite:html', ['revision'], function () {
     var manifest = gulp.src(`${revisionDist.default}/rev-manifest.json`);
 
     return gulp.src(`${revisionDist.default}/*.html`)
-        .pipe(revRewrite({ manifest }))
+        .pipe(revRewrite({
+            manifest
+        }))
         .pipe(gulp.dest(revisionDist.default));
 });
 
-gulp.task('revRewrite:css', ['revision'], function() {
+gulp.task('revRewrite:css', ['revision'], function () {
     var manifest = gulp.src(`${revisionDist.default}/rev-manifest.json`);
 
     return gulp.src(`${sassDist.default}/*.css`)
-        .pipe(revRewrite({ manifest }))
+        .pipe(revRewrite({
+            manifest
+        }))
         .pipe(gulp.dest(sassDist.default));
 });
 
@@ -184,7 +210,9 @@ gulp.task('build', function (cb) {
 });
 
 gulp.task('clean', function () {
-    return del.sync(['app/dist', 'app/index.html'], function (error, paths) { console.error(error) });
+    return del.sync(['app/dist', 'app/index.html'], function (error, paths) {
+        console.error(error)
+    });
 });
 
 gulp.task('prod', function (cb) {

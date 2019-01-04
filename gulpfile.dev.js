@@ -87,12 +87,20 @@ gulp.task('js:app', function () {
 
 gulp.task('html', function () {
     var target = gulp.src(htmlApp.default);
-    var jsLibStream = gulp.src([`${jsDist.default}/lib.js`], {read: false});
-    var jsAppStream = gulp.src([`${jsDist.default}/app.js`], {read: false});
-    var cssAppStream = gulp.src([`${sassDist.default}/app.css`], {read: false});
+    var jsLibStream = gulp.src([`${jsDist.default}/lib.js`], {
+        read: false
+    });
+    var jsAppStream = gulp.src([`${jsDist.default}/app.js`], {
+        read: false
+    });
+    var cssAppStream = gulp.src([`${sassDist.default}/app.css`], {
+        read: false
+    });
 
     return target
-        .pipe(inject(streamSeries(cssAppStream, jsLibStream, jsAppStream), {relative: true}))
+        .pipe(inject(streamSeries(cssAppStream, jsLibStream, jsAppStream), {
+            relative: true
+        }))
         .pipe(gulp.dest('app'));
 });
 
