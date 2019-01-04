@@ -5,6 +5,7 @@
     "author": "liuliangsir@gmail.com",
     "scripts": {
         "build": "gulp --gulpfile gulpfile.prod.js",
+        "postbuild": "sudo bash ./scripts/others-asset-porter.sh --environment=server",
         "dev": "gulp --gulpfile gulpfile.dev.js",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
