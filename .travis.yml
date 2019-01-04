@@ -16,6 +16,6 @@ deploy:
   github-token: $GITHUB_TOKEN
   keep-history: false
   committer-from-gh: true
-  local-dir: ./dist
+  local-dir: ./app/dist
   on:
     branch: master
