@@ -9,6 +9,7 @@ exports.js = {
             'app/lib/magnific/jquery.magnific-popup.min.js',
             'app/lib/jarallax-master/dist/jarallax.min.js',
             'app/lib/jarallax-master/dist/jarallax-element.min.js',
+            'app/lib/jquery.lazy-master/jquery.lazy.min.js',
             'app/lib/aos-master/aos.js',
             'app/lib/swiper/dist/js/swiper.min.js'
         ],

@@ -120,6 +120,16 @@ gulp.task('js:lib', function () {
         .pipe(gulp.dest(jsDist.default))
 });
 
+gulp.task('preload:lib', function () {
+    return gulp
+        .src(jsLib.default)
+        .pipe(concat('lib.preload'))
+        .pipe(uglify({
+            toplevel: true
+        }))
+        .pipe(gulp.dest(jsDist.default))
+});
+
 gulp.task('js:app', function () {
     return gulp
         .src(jsApp.glob)
@@ -130,12 +140,28 @@ gulp.task('js:app', function () {
         .pipe(gulp.dest(jsDist.default))
 });
 
-gulp.task('html', ['js:lib', 'js:app', 'sass'], function () {
+gulp.task('preload:app', function () {
+    return gulp
+        .src(jsApp.glob)
+        .pipe(concat('app.preload'))
+        .pipe(uglify({
+            toplevel: true
+        }))
+        .pipe(gulp.dest(jsDist.default))
+});
+
+gulp.task('html', ['js:lib', 'js:app', 'preload:lib', 'preload:app', 'sass'], function () {
     var target = gulp.src(htmlApp.default);
     var jsLibStream = gulp.src([`${jsDist.default}/lib.js`], {
         read: false
     });
     var jsAppStream = gulp.src([`${jsDist.default}/app.js`], {
+        read: false
+    });
+    var preloadLibStream = gulp.src([`${jsDist.default}/lib.preload`], {
+        read: false
+    });
+    var preloadAppStream = gulp.src([`${jsDist.default}/app.preload`], {
         read: false
     });
     var cssAppStream = gulp.src([`${sassDist.default}/app.css`], {
@@ -145,14 +171,20 @@ gulp.task('html', ['js:lib', 'js:app', 'sass'], function () {
     return target
         .pipe(
             inject(
-                streamSeries(cssAppStream, jsLibStream, jsAppStream), {
+                streamSeries(cssAppStream, jsLibStream, jsAppStream, preloadLibStream, preloadAppStream), {
                     relative: false,
                     ignorePath: 'app/dist',
-                    addRootSlash: false
+                    addRootSlash: false,
+                    transform(filepath) {
+                        if (filepath.slice(-8) === '.preload') {
+                            return `<link rel="preload" href="${filepath.replace('preload', 'js')}" as="script"/>`;
+                        }
+                        return inject.transform.apply(inject.transform, arguments);
+                    }
                 }
             )
         )
-        .pipe(gulp.dest(revisionDist.default));
+        .pipe(gulp.dest(revisionDist.default))
 });
 
 gulp.task('html:minify', () => {
@@ -169,7 +201,7 @@ gulp.task('html:minify', () => {
         .pipe(gulp.dest(revisionDist.default));
 });
 
-gulp.task('revision', ['images', 'js:lib', 'js:app', 'sass'], function () {
+gulp.task('revision', ['images', 'js:lib', 'js:app', 'preload:lib', 'preload:app', 'sass'], function () {
     var revisionSrc = revisionApp.glob;
     if (revisionApp.exclude) revisionSrc = [revisionSrc].concat(revisionApp.exclude);
 
@@ -206,11 +238,17 @@ gulp.task('revRewrite:css', ['revision'], function () {
 gulp.task('revRewrite', ['revRewrite:html', 'revRewrite:css']);
 
 gulp.task('build', function (cb) {
-    runSequence('html', 'revRewrite', 'html:minify', cb);
+    runSequence('html', 'revRewrite', 'html:minify', 'clean:preload', cb);
 });
 
 gulp.task('clean', function () {
     return del.sync(['app/dist', 'app/index.html'], function (error, paths) {
+        console.error(error)
+    });
+});
+
+gulp.task('clean:preload', function () {
+    return del.sync(['app/dist/**/*.preload'], function (error, paths) {
         console.error(error)
     });
 });
