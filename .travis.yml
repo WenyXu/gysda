@@ -1,0 +1,21 @@
+language: node_js
+node_js: stable
+sudo: required
+dist: trusty
+script:
+  - "npm run build"
+branches:
+  only:
+    - master
+cache:
+  directories:
+    - $HOME/.npm
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  keep-history: false
+  committer-from-gh: true
+  local-dir: ./dist
+  on:
+    branch: master
