@@ -172,7 +172,15 @@ $(document).ready(function () {
 
     // lazy load
     $('.lazy').Lazy({
-        placeholder: 'data:image/gif;base64,R0lGODlhEALAPQAPzl5uLr9Nrl8e7...'
+        afterLoad: function(element) {
+            element.addClass('lazy--loaded');
+        },
+        onError: function(element) {
+            element.addClass('lazy--broken');
+        },
+        onFinishedAll: function () {
+            if (!this.config('autoDestroy')) this.destroy();
+        }
     });
 });
 

@@ -45,6 +45,14 @@ section
     position: relative
     z-index: 1
 
+img
+    &.lazy
+        visibility: hidden
+        &.lazy--loaded
+            visibility: visible
+        &.lazy--broken
+            visibility: hidden
+
 .wrapper
     position: relative
     overflow: hidden
