@@ -110,6 +110,12 @@ gulp.task('sass', function () {
         .pipe(gulp.dest(sassDist.default))
 });
 
+gulp.task('js:jquery', function () {
+    return gulp
+        .src(jsLib.exclude)
+        .pipe(gulp.dest(jsDist.default))
+});
+
 gulp.task('js:lib', function () {
     return gulp
         .src(jsLib.default)
@@ -150,7 +156,7 @@ gulp.task('preload:app', function () {
         .pipe(gulp.dest(jsDist.default))
 });
 
-gulp.task('html', ['js:lib', 'js:app', 'preload:lib', 'preload:app', 'sass'], function () {
+gulp.task('html', ['js:lib', 'js:app', 'js:jquery', 'preload:lib', 'preload:app', 'sass'], function () {
     var target = gulp.src(htmlApp.default);
     var jsLibStream = gulp.src([`${jsDist.default}/lib.js`], {
         read: false
