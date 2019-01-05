@@ -13,7 +13,8 @@ exports.js = {
             'app/lib/aos-master/aos.js',
             'app/lib/swiper/dist/js/swiper.min.js'
         ],
-        glob: 'app/lib/**/*.js'
+        glob: 'app/lib/**/*.js',
+        exclude: 'app/lib/jquery/jquery.min.js'
     },
     dist: {
         default: 'app/dist/js',

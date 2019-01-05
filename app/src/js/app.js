@@ -171,7 +171,9 @@ $(document).ready(function () {
     });
 
     // lazy load
-    $('.lazy').Lazy();
+    $('.lazy').Lazy({
+        placeholder: 'data:image/gif;base64,R0lGODlhEALAPQAPzl5uLr9Nrl8e7...'
+    });
 });
 
 // sticky header
