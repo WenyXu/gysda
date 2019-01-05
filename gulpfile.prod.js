@@ -184,11 +184,11 @@ gulp.task('html', ['js:lib', 'js:app', 'preload:lib', 'preload:app', 'sass'], fu
                 }
             )
         )
-        .pipe(gulp.dest(revisionDist.default))
+        .pipe(gulp.dest(htmlDist.default))
 });
 
 gulp.task('html:minify', () => {
-    return gulp.src(`${revisionDist.default}/*.html`)
+    return gulp.src(htmlDist.glob)
         .pipe(htmlmin({
             collapseWhitespace: true,
             removeComments: true,
@@ -198,7 +198,7 @@ gulp.task('html:minify', () => {
             removeRedundantAttributes: true,
             removeStyleLinkTypeAttributes: true
         }))
-        .pipe(gulp.dest(revisionDist.default));
+        .pipe(gulp.dest(htmlDist.default));
 });
 
 gulp.task('revision', ['images', 'js:lib', 'js:app', 'preload:lib', 'preload:app', 'sass'], function () {
@@ -218,11 +218,11 @@ gulp.task('revision', ['images', 'js:lib', 'js:app', 'preload:lib', 'preload:app
 gulp.task('revRewrite:html', ['revision'], function () {
     var manifest = gulp.src(`${revisionDist.default}/rev-manifest.json`);
 
-    return gulp.src(`${revisionDist.default}/*.html`)
+    return gulp.src(htmlDist.glob)
         .pipe(revRewrite({
             manifest
         }))
-        .pipe(gulp.dest(revisionDist.default));
+        .pipe(gulp.dest(htmlDist.default));
 });
 
 gulp.task('revRewrite:css', ['revision'], function () {

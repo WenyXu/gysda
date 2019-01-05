@@ -34,23 +34,40 @@ var {
 } = require('./paths.config');
 
 var imageConfig = {
-    src: imageApp.glob,
+    othersImageFormatSrc: imageApp.glob,
+    jpgImageFormatSrc: imageApp.default,
     build: imageDist.default,
-    minOpt: {
+    othersImageFormatMinOpt: {
         optimizationLevel: 5
+    },
+    jpgImageFormatMinOpt: {
+        progressive: true
     }
 };
 
-gulp.task('images', function () {
+gulp.task('images:others', function () {
     return gulp
-        .src(imageConfig.src)
+        .src(imageConfig.othersImageFormatSrc)
         .pipe(newer(imageConfig.build))
-        .pipe(imagemin(imageConfig.minOpt))
+        .pipe(imagemin(imageConfig.othersImageFormatMinOpt))
         .pipe(size({
             showFiles: true
         }))
         .pipe(gulp.dest(imageConfig.build))
 });
+
+gulp.task('images:jpg', function () {
+    return gulp
+        .src(imageConfig.jpgImageFormatSrc)
+        .pipe(newer(imageConfig.build))
+        .pipe(imagemin(imageConfig.jpgImageFormatMinOpt))
+        .pipe(size({
+            showFiles: true
+        }))
+        .pipe(gulp.dest(imageConfig.build))
+});
+
+gulp.task('images', ['images:others', 'images:jpg']);
 
 var includePaths = [
     path.join(__dirname, 'app', 'lib')
@@ -63,7 +80,7 @@ gulp.task('sass', function () {
             includePaths
         }).on('error', notify.onError()))
         .pipe(urlAdjuster({
-            prepend: '/dist/img/'
+            prepend: '/img/'
         }))
         .pipe(gulp.dest(sassDist.default))
         .pipe(browserSync.stream());
@@ -85,7 +102,7 @@ gulp.task('js:app', function () {
         .pipe(browserSync.stream());
 });
 
-gulp.task('html', function () {
+gulp.task('html', ['images', 'sass', 'js:lib', 'js:app'], function () {
     var target = gulp.src(htmlApp.default);
     var jsLibStream = gulp.src([`${jsDist.default}/lib.js`], {
         read: false
@@ -99,15 +116,17 @@ gulp.task('html', function () {
 
     return target
         .pipe(inject(streamSeries(cssAppStream, jsLibStream, jsAppStream), {
-            relative: true
+            relative: false,
+            ignorePath: 'app/dist',
+            addRootSlash: false
         }))
-        .pipe(gulp.dest('app'));
+        .pipe(gulp.dest(htmlDist.default));
 });
 
-gulp.task('browser-sync', function () {
+gulp.task('browser-sync', ['html'], function () {
     browserSync.init({
         server: {
-            baseDir: 'app'
+            baseDir: htmlDist.default
         },
         notify: false,
         ui: {
@@ -121,7 +140,7 @@ gulp.task('browser-sync', function () {
     });
 });
 
-gulp.task('watch', ['images', 'sass', 'js:lib', 'js:app', 'html', 'browser-sync'], function () {
+gulp.task('watch', ['browser-sync'], function () {
     gulp.watch(sassApp.glob, ['sass']);
     gulp.watch(jsLib.glob, ['js:lib']);
     gulp.watch(jsApp.glob, ['js:app']);

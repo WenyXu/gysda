@@ -36,7 +36,8 @@ exports.html = {
         default: 'app/src/index.html'
     },
     dist: {
-        glob: 'app/*.html'
+        glob: 'app/dist/*.html',
+        default: 'app/dist'
     }
 };
 
